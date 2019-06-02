@@ -224,10 +224,10 @@ async def carbon_api(e):
    # Removing carbon.png after uploading
     await e.delete()
 
-HELPER.update({
+CMD_HELP.update({
       "carbon":".carbon <text> \n Beautify your code"
 })
-HELPER.update({
+CMD_HELP.update({
     'setlang': ".setlang <Lang> \
             \nUsage: It will set language for you carbon module "
 })
