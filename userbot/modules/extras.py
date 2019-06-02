@@ -47,7 +47,7 @@ async def cry(e):
         await e.edit("(;´༎ຶД༎ຶ)")
 
 @register(outgoing=True, pattern="^.10iq$")
-async def 10iq(e):
+async def iqless(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("♿")
 
