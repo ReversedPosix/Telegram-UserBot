@@ -1,6 +1,6 @@
 import asyncio, subprocess
 import time, re, io, os
-from userbot import bot, LOGGER, LOGGER_GROUP, HELPER
+from userbot import bot, BOTLOG, LOGGER_GROUP, HELPER
 from telethon import events, functions, types
 from telethon.events import StopPropagation
 from telethon.tl.functions.messages import ExportChatInviteRequest
