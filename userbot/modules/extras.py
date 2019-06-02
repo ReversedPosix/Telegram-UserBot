@@ -6,7 +6,6 @@ from telethon.events import StopPropagation
 from telethon.tl.functions.messages import ExportChatInviteRequest
 from telethon.tl.functions.contacts import BlockRequest
 from telethon.tl.functions.channels import LeaveChannelRequest, CreateChannelRequest, DeleteMessagesRequest
-from lmgtfy import lmgtfy
 from collections import deque
 from telethon.tl.functions.users import GetFullUserRequest
 from userbot.events import register
@@ -243,7 +242,7 @@ HELPER.update({
     "cry": "Cry"
 })
 HELPER.update({
-    "10iq": "Send 10iq emoji."
+    "iqless": "Send iqless emoji."
 })
 HELPER.update({
     "moon": "Bot will send a cool moon animation."
