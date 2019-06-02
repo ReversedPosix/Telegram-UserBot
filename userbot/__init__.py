@@ -14,7 +14,7 @@ from distutils.util import strtobool as sb
 from dotenv import load_dotenv
 from requests import get
 from telethon import TelegramClient
-from telethon.sessions import StringSession
+
 
 load_dotenv("config.env")
 
@@ -48,7 +48,7 @@ if CONFIG_CHECK:
     LOGS.error("Please remove the line mentioned in the first hashtag from the config.env file")
     quit(1)
 
-STRING_SESSION = os.environ.get("STRING_SESSION", None)
+API_KEY = os.environ.get("API_KEY", None)
 
 API_HASH = os.environ.get("API_HASH", None)
 
