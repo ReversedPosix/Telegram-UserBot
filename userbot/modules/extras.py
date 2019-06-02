@@ -62,7 +62,7 @@ async def _(event):
 @register(outgoing=True, pattern="^.creator$")
 async def creator(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit("t.me/NightShade")
+        await e.edit("https://telegram.dog/NightShade")
 
 @register(outgoing=True, pattern="^.readme$")
 async def reedme(e):
