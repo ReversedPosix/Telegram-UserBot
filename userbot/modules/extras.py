@@ -231,36 +231,36 @@ HELPER.update({
     'setlang': ".setlang <Lang> \
             \nUsage: It will set language for you carbon module "
 })
-HELPER.update({
+CMD_HELP.update({
     "leave": "Leave a Chat"
 })
-HELPER.update({
+CMD_HELP.update({
     ";__;": "You try it!"
 })
-HELPER.update({
+CMD_HELP.update({
     "cry": "Cry"
 })
-HELPER.update({
+CMD_HELP.update({
     "iqless": "Send iqless emoji."
 })
-HELPER.update({
+CMD_HELP.update({
     "moon": "Bot will send a cool moon animation."
 })
-HELPER.update({
+CMD_HELP.update({
     "clock": "Bot will send a cool clock animation."
 })
-HELPER.update({
+CMD_HELP.update({
     "readme": "Reedme."
 })
-HELPER.update({
+CMD_HELP.update({
     "creator": "creator."
 })
-HELPER.update({
+CMD_HELP.update({
     "disapprove": "Disapprove anyone in PM."
 })
-HELPER.update({
+CMD_HELP.update({
     "myusernames": "List of Usernames owned by you."
 })
-HELPER.update({
+CMD_HELP.update({
     "oof": "Same as ;__; but ooof"
 })
