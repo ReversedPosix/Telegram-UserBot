@@ -9,7 +9,6 @@ from telethon.tl.functions.channels import LeaveChannelRequest, CreateChannelReq
 from collections import deque
 from telethon.tl.functions.users import GetFullUserRequest
 from userbot.events import register
-from userbot.modules.rextester.api import UnknownLanguage, Rextester
 from time import sleep
 from selenium import webdriver
 from urllib.parse import quote_plus
