@@ -25,7 +25,6 @@ async def spammer(e):
         counter = int(message[6:8])
         spam_message = str(e.text[8:])
         await asyncio.wait([e.respond(spam_message) for i in range(counter)])
-        time.sleep(1)
         await e.delete()
         if LOGGER:
             await e.client.send_message(
@@ -66,4 +65,21 @@ async def tiny_pic_spam(e):
                 LOGGER_GROUP,
                 "#PICSPAM \n\n"
                 "PicSpam was executed successfully"
+                )
+
+
+@register(outgoing=True, pattern="^.slowspam")
+async def spammer(e):
+    if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
+        message = e.text
+        counter = int(message[10:13])
+        spam_message = str(e.text[13:])
+        for i in range(1, counter):
+            await e.respond(spam_message);time.sleep(0.7)
+        await e.delete()
+        if LOGGER:
+            await e.client.send_message(
+                LOGGER_GROUP,
+                "#SlowSPAM \n\n"
+                "SlowSpam was executed successfully"
                 )
