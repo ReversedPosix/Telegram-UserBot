@@ -173,7 +173,6 @@ async def setlang(prog):
         LANG = prog.text.split()[1]
         await prog.edit(f"language set to {LANG}")
 
-})
 CMD_HELP.update({
     'setlang': ".setlang <Lang> \
             \nUsage: It will set language for you carbon module "
