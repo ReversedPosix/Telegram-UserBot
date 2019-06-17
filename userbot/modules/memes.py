@@ -17,7 +17,7 @@ from zalgo_text import zalgo
 
 from cowpy import cow
 
-from userbot import (DISABLE_RUN, WIDE_MAP, CMD_HELP)
+from userbot import (WIDE_MAP, CMD_HELP)
 from userbot.events import register
 
 # ================= CONSTANT =================
@@ -192,6 +192,7 @@ RUNSREACTS = [
     "I am just walking off, coz me is too fat.",
     "I Fugged off!",
 ]
+DISABLE_RUN = False
 # ===========================================
 
 
