@@ -29,6 +29,26 @@
       "description": "Get your own APPID from https://api.openweathermap.org/data/2.5/weather",
       "required": false
     },
+    "YOUTUBE_API_KEY": {
+      "description": "Get your own API_KEY from https://console.cloud.google.com",
+      "required": false
+    },
+    "DEFAULT_BIO": {
+      "description": "Get your own SPOTIFY DEFAULT_BIO from https://www.spotify.com",
+      "required": false
+    },
+    "SPOTIFY_USERNAME": {
+      "description": "Get your own SPOTIFY_USERNAME https://www.spotify.com",
+      "required": false
+    },
+    "SPOTIFY_PASS": {
+      "description": "Get your own SPOTIFY_PASS from https://www.spotify.com",
+      "required": false
+    },
+    "SPOTIFY_BIO_PREFIX": {
+      "description": "Get your own SPOTIFY_BIO_PREFIX from https://www.spotify.com Example: GitHub: MacTavishAO : Skillet - Feel Invincible",
+      "required": false
+    },
     "SCREEN_SHOT_LAYER_ACCESS_KEY": {
       "description": "Get your own ACCESS_KEY from http://api.screenshotlayer.com/api/capture",
       "required": false
