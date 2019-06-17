@@ -44,7 +44,7 @@ async def cry(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("(;´༎ຶД༎ຶ)")
 
-@register(outgoing=True, pattern="^.10iq$")
+@register(outgoing=True, pattern="^.iqless$")
 async def iqless(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("♿")
@@ -62,7 +62,7 @@ async def _(event):
 @register(outgoing=True, pattern="^.creator$")
 async def creator(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit("https://telegram.dog/NightShade")
+        await e.edit("https://t.me/NightShade")
 
 @register(outgoing=True, pattern="^.readme$")
 async def reedme(e):
@@ -173,59 +173,6 @@ async def setlang(prog):
         LANG = prog.text.split()[1]
         await prog.edit(f"language set to {LANG}")
 
-
-@register(outgoing=True, pattern="^.carbon")
-async def carbon_api(e):
-    if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit("Processing...")
-        CARBON = 'https://carbon.now.sh/?l={lang}&code={code}'
-        LANG = "en"
-        textx = await e.get_reply_message()
-        pcode = e.text
-        if pcode[8:]:
-            pcode = str(pcode[8:])
-        elif textx:
-            pcode = str(textx.message)  # Importing message to module
-        code = quote_plus(pcode)  # Converting to urlencoded
-        url = CARBON.format(code=code, lang=LANG)
-        chrome_options = Options()
-        chrome_options.add_argument("--headless")
-        chrome_options.add_argument("--window-size=1920x1080")
-        chrome_options.add_argument("--disable-dev-shm-usage")
-        chrome_options.add_argument("--no-sandbox")
-        chrome_options.add_argument('--disable-gpu')
-        prefs = {'download.default_directory': '/'}
-        chrome_options.add_experimental_option('prefs', prefs)
-        await e.edit("Processing 30%")
-
-        driver = webdriver.Chrome(options=chrome_options)
-        driver.get(url)
-        download_path = '/home/'
-        driver.command_executor._commands["send_command"] = ("POST", '/session/$sessionId/chromium/send_command')
-        params = {'cmd': 'Page.setDownloadBehavior', 'params': {'behavior': 'allow', 'downloadPath': download_path}}
-        command_result = driver.execute("send_command", params)
-
-        driver.find_element_by_xpath("//button[contains(text(),'Export')]").click()
-        sleep(3)  # this might take a bit.
-        await e.edit("Processing 50%")
-        driver.find_element_by_xpath("//button[contains(text(),'PNG')]").click()
-        sleep(3)  # Waiting for downloading
-
-        await e.edit("Processing 90%")
-        file = '/home/carbon.png'
-        await e.edit("Done!!")
-        await bot.send_file(
-         e.chat_id,
-         file,
-         reply_to=e.message.reply_to_msg_id,
-           )
-
-    os.remove('/home/carbon.png')
-   # Removing carbon.png after uploading
-    await e.delete()
-
-CMD_HELP.update({
-      "carbon":".carbon <text> \n Beautify your code"
 })
 CMD_HELP.update({
     'setlang': ".setlang <Lang> \
