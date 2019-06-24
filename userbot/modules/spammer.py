@@ -94,3 +94,16 @@ async def spammer(e):
                 "DelaySpam was executed successfully"
                 )
                                
+CMD_HELP.update({
+    "spammer": ".tspam <text>\
+\nUsage: Spam the text letter by letter.\
+\n\n.spam <count> <text>\
+\nUsage: Your regular spammer stuff :P\
+\n\n.bigspam <count> <text>\
+\nUsage: .spam on steroids !!\
+\n\n.picspam <count> <link>\
+\nUsage: As if text spam was not enough !!\
+\n\n.delayspam <delay> <count> <text>\
+\nUsage: .bigspam but slower.\
+\n\n\nNOTE : I am not responsible for Telegram guys snapping their fingers and killing your account !!"
+})
