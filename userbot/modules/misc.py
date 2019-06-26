@@ -148,9 +148,9 @@ async def disapprovepm(disapprvpm):
             f"[{name0}](tg://user?id={disapprvpm.chat_id}) `Disaproved to PM!`"
             )
 
-        if LOGGER:
+        if BOTLOG:
             await bot.send_message(
-                LOGGER_GROUP,
+                BOTLOG_CHATID,
                 f"[{name0}](tg://user?id={disapprvpm.chat_id})"
                 " was disapproved to PM you.",
             )
