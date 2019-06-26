@@ -621,7 +621,7 @@ async def Oof(e):
         t = t[:-1] + "of"
         await e.edit(t)
 
-@register(outgoing=True, pattern="^.10iq$")
+@register(outgoing=True, pattern="^.iqless$")
 async def iqless(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("♿")
@@ -735,7 +735,7 @@ CMD_HELP.update({
 \nUsage: Vaporize everything!\
 \n\n.str\
 \nUsage: Stretch it.\
-\n\n.10iq\
+\n\n.iqless\
 \nUsage: You retard !!\
 \n\n.zal\
 \nUsage: Invoke the feeling of chaos.\
