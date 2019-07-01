@@ -8,6 +8,7 @@
 import os
 
 from sys import version_info
+from userbot import bot HELPER
 from logging import basicConfig, getLogger, INFO, DEBUG
 from distutils.util import strtobool as sb
 
@@ -112,6 +113,7 @@ LASTMSG = {}
 ISAFK = False
 ENABLE_KILLME = True
 SNIPE_ID = 0
+HELPER = {}
 MUTING_USERS = {}
 MUTED_USERS = {}
 CMD_HELP = {}
