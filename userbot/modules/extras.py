@@ -22,7 +22,7 @@ from collections import deque
 
 from pyfiglet import Figlet
 
-from userbot import LOGGER, LOGGER_GROUP, HELPER, bot
+from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, bot
 from userbot.events import register
 
 langi = "en"
@@ -156,9 +156,9 @@ async def let_me_google_that_for_you(lmgtfy_q):
             query = query.message
         reply_text = 'http://lmgtfy.com/?s=g&iie=1&q=' + query.replace(" ", "+")
         await lmgtfy_q.edit(reply_text)
-        if LOGGER:
+        if BOTLOG:
             await bot.send_message(
-                LOGGER_GROUP,
+                BOTLOG_CHATID,
                 "LMGTFY query " + query + " was executed successfully",
             )
 

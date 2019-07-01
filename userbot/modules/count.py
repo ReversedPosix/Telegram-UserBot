@@ -1,5 +1,5 @@
 from userbot.events import register
-from userbot import bot, HELPER
+from userbot import bot, CMD_HELP
 from telethon import events
 import asyncio
 from datetime import datetime

@@ -10,7 +10,7 @@
 
 from telethon.errors import ChatAdminRequiredError
 from telethon.tl.types import ChannelParticipantsAdmins
-from userbot import HELPER
+from userbot import CMD_HELP
 from userbot.events import register
 
 

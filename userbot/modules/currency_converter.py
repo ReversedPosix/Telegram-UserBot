@@ -6,7 +6,7 @@ import asyncio
 from datetime import datetime
 import requests
 from userbot.events import register
-from userbot import HELPER
+from userbot import CMD_HELP
 
 #Using this module:-
 #To use , type - .currency {ammount} {currency u typed} {currency u wanted }
