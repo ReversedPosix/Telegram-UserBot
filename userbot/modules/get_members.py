@@ -42,7 +42,7 @@ async def get_users(show):
             mentions += " " + str(err) + "\n"
         await show.edit(mentions)
 
-HELPER.update({
+CMD_HELP.update({
     "userslist": ".userslist or .userslist <name>\
     \nUsage: Retrieves all users in the chat."
 })

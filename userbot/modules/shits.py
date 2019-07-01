@@ -85,9 +85,9 @@ async def get_pack_info(event):
              f"**Emojis In Pack:** {' '.join(pack_emojis)}"
     await event.edit(OUTPUT)
 
-HELPER.update(
+CMD_HELP.update(
     {"gstfy": "gangstafy the text"}
 )
-HELPER.update(
+CMD_HELP.update(
     {"packinfo": "send sticker packinfo"}
 )

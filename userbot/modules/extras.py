@@ -163,21 +163,21 @@ async def let_me_google_that_for_you(lmgtfy_q):
             )
 
 
-HELPER.update({
+CMD_HELP.update({
     "IMDB": ".imdb <movie-name> \n Shows movie info ad other stuffs"
 })
-HELPER.update({
+CMD_HELP.update({
     "smk":".smk <text> \n A shit module for ツ , who cares"
 })
-HELPER.update({
+CMD_HELP.update({
     "repeat": ".repeat <no.> <text> \n geg module ask him"
 })
-HELPER.update({
+CMD_HELP.update({
     "lfy":".lfy <text> \n geg module ask him lol"
 })
-HELPER.update({
+CMD_HELP.update({
     "moon":"shows moon rotating , boredom stuffs of yasir"
 })
-HELPER.update({
+CMD_HELP.update({
     "leave":"lazy ? just use thiZ"
 })

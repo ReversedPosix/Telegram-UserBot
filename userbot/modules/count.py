@@ -45,6 +45,6 @@ Super Groups:\t{}
 Channels:\t{}
 Bots:\t{}""".format(ms, u, g, c, bc, b))
 
-HELPER.update(
+CMD_HELP.update(
     {"count": "count Groups etc......"}
 )

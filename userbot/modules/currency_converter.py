@@ -38,6 +38,6 @@ async def _(event):
     end = datetime.now()
     ms = (end - start).seconds
 
-HELPER.update(
+CMD_HELP.update(
     {'currency': 'syntax : .currency {ammount} {currency_from} {currency_to} \n Just a converter'}
 )
