@@ -185,6 +185,38 @@ async def approvepm(apprvpm):
             )
 
 
+@register(outgoing=True, pattern="^.disapprove$")
+async def disapprovepm(disapprvpm):
+    if not disapprvpm.text[0].isalpha() and disapprvpm.text[0] not in ("/", "#", "@", "!"):
+        try:
+            from userbot.modules.sql_helper.pm_permit_sql import dissprove
+        except:
+            await disapprvpm.edit("`Running on Non-SQL mode!`")
+            return
+
+        if disapprvpm.reply_to_msg_id:
+            reply = await disapprvpm.get_reply_message()
+            replied_user = await bot(GetFullUserRequest(reply.from_id))
+            aname = replied_user.user.id
+            name0 = str(replied_user.user.first_name)
+            dissprove(replied_user.user.id)
+        else:
+            dissprove(disapprvpm.chat_id)
+            aname = await bot.get_entity(disapprvpm.chat_id)
+            name0 = str(aname.first_name)
+
+        await disapprvpm.edit(
+            f"[{name0}](tg://user?id={disapprvpm.chat_id}) `Disaproved to PM!`"
+            )
+
+        if BOTLOG:
+            await bot.send_message(
+                BOTLOG_CHATID,
+                f"[{name0}](tg://user?id={disapprvpm.chat_id})"
+                " was disapproved to PM you.",
+            )
+
+
 @register(outgoing=True, pattern="^.block$")
 async def blockpm(block):
     """ For .block command, block people from PMing you! """
@@ -244,6 +276,8 @@ CMD_HELP.update({
     "pmpermit": "\
 .approve\
 \nUsage: Approves the mentioned/replied person to PM.\
+\n\n.disapprove\
+\nUsage: Disapprove anyone in PM..\
 \n\n.block\
 \nUsage: Blocks the person from PMing you.\
 \n\n.unblock\
